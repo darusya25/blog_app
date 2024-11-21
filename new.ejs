@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="/css/styles.css" />
+    <title>Create Post</title>
+  </head>
+  <body>
+    <div class="container">
+      <h1>Create a New Post</h1>
+      <form action="/posts" method="POST">
+        <input type="text" name="title" placeholder="Title" required />
+        <textarea
+          name="content"
+          placeholder="Content"
+          rows="5"
+          required
+        ></textarea>
+        <input type="text" name="author" placeholder="Author" required />
+        <input type="submit" value="Create Post" />
+      </form>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="/css/styles.css" />
+    <title>Edit Post</title>
+  </head>
+  <body>
+    <div class="container">
+      <h1>Edit Post</h1>
+      <form action="/posts/<%= post._id %>?_method=PUT" method="POST">
+        <input
+          type="text"
+          name="title"
+          value="<%= post.title %>"
+          placeholder="Title"
+          required
+        />
+        <textarea name="content" placeholder="Content" rows="5" required>
+<%= post.content %></textarea
+        >
+        <input
+          type="text"
+          name="author"
+          value="<%= post.author %>"
+          placeholder="Author"
+          required
+        />
+        <input type="submit" value="Update Post" />
+      </form>
+      <div class="text-center mt-20">
+        <a href="/" class="button">Cancel</a>
+      </div>
+    </div>
+  </body>
+</html>
